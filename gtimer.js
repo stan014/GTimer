@@ -101,6 +101,7 @@
         destory: function () {
             jobs = [];
             if (isStart) {
+                isStart = false;
                 clearInterval(timer);
             }
         }
