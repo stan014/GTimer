@@ -4,7 +4,7 @@ GTimer provides a global timer management to make use multiple timers more easie
 ```javascript
 window.setInterval(function () {
 	...
-},interval);
+}, interval);
 ```
 
 ## Gettting Started
@@ -16,7 +16,7 @@ Include the js file as the following:
 
 ## Create a Job
 
-GTimer treat Any interval function as a Job, each job need 3 parameters.
+GTimer treat any interval function as a Job, each job need 3 parameters.
  * id: the uniqueidentifer for job.
  * interval: the interval of job be executed (ms).
  * f: the function will be executed.
@@ -39,6 +39,11 @@ GTimer.add('job1', 3000, hello);
   ```javascript
  GTimer.stop();
  ```
+You can start/stop specific job by id. 
+```javascript
+GTimer.start('job1');
+GTimer.stop('job1');
+```
 
 ## Manage Jobs
 
