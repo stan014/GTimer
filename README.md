@@ -9,19 +9,19 @@ window.setInterval(function () {
 
 ## Gettting Started
 
-Include the js file as the following:
+Include the js file like the following:
 ```html
 <script type="text/javascript" src="/js/timer.js"></script>
 ```
 
 ## Create a Job
 
-GTimer treat any interval function as a Job, each job need 3 parameters.
- * id: the uniqueidentifer for job.
+GTimer treat any interval function as a Job, which create with 3 parameters.
+ * id: the unique identifer for job.
  * interval: the interval of job be executed (ms).
  * f: the function will be executed.
 
-You can create a new job as the following:
+For example:
 ```javascript
 function hello(){
 	console.log('hello!');
@@ -39,7 +39,7 @@ GTimer.add('job1', 3000, hello);
   ```javascript
  GTimer.stop();
  ```
-You can start/stop specific job by id. 
+And You can also toggle specific job by id. 
 ```javascript
 GTimer.start('job1');
 GTimer.stop('job1');
@@ -48,7 +48,7 @@ GTimer.stop('job1');
 ## Manage Jobs
 
  
-If you want to start/stop specific job, you can do it by job id.
+To remove job:
 ```javascript
 GTimer.remove('job1');
 ```
@@ -56,7 +56,7 @@ You can get all jobs by
 ```javascript
 var jobs = GTimer.getJobs();
 ```
-It will return an array which contains id & interval for each job, and 
+It will return an object array which contains id & interval for each job, and 
 ```javascript
 GTimer.destory();
 ```
